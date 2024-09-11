@@ -27,6 +27,8 @@ so to help out some possible mistakes I will make a few bulletpoints to take int
 - Check that you have a **static DNS IP address** or better, a **static IP address**, this can be configured by your **ISP** 
 by calling them, usually they will give you a DDNS, which is a **Dynamic public static IP**, so make sure you have a **DDNS config** 
 for **updating** your **IP incase it changes**, or else you'll be doomed.
+- To check if you have a CGNET IP address assigned to your internet connection, check the WAN IP address on your Unifi dashboard. 
+If the IP address falls between this range of 100.64.0.0 and 100.127.255.255 then you have a CGNET address.
 - Be sure to **adjust** your **DNS** from your server, so if you've changed your server's DNS (maybe to Cloudflare --> 1.1.1.1, 1.0.0.1) 
 be sure to add that to the config file, if you haven't changed it, or you have no idea what this means, just put 'auto' and you will 
 be fine.
