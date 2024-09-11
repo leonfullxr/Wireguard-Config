@@ -1,5 +1,5 @@
 # Wireguard Admin Scripts
-#### Both of the scripts is copied and developed out from https://github.com/davidgross/ - so all creds to David Gross :)
+#### Both of the scripts are copied and developed out from https://github.com/davidgross/ - so all creds to David Gross :)
 
 Scripts to provision Wireguard clients. Written to run on the same Linux computer as the Wireguard server.
 Focus is on daily use of the basics - add and delete peers/clients.
@@ -17,6 +17,19 @@ And last but not least a directory called 'clients' containing:
 - last-ip.txt - keeps state of last used wireguard peer's ip
 - wg0-template.conf - template to generate a basic peer's wg0.conf
 - wg0-template-prekey.conf - template to generate a peer's wg0.conf with a preshared key
+
+### Considerations
+I've had BIG headaches trying to **configure** a **self-hosted VPN server**, and I've had many errors in the process,
+so to help out some possible mistakes I will make a few bulletpoints to take into consideration that **might help**:
+
+- Don't use a VPN while configuring Wireguard, it just makes things harder and can possibly trigger some bad config.
+- Check that your **server ports** are **enabled and configured** (mostly 51820 by default or any other you use).
+- Check that you have a **static DNS IP address** or better, a **static IP address**, this can be configured by your **ISP** 
+by calling them, usually they will give you a DDNS, which is a **Dynamic public static IP**, so make sure you have a **DDNS config** 
+for **updating** your **IP incase it changes**, or else you'll be doomed.
+- Be sure to **adjust** your **DNS** from your server, so if you've changed your server's DNS (maybe to Cloudflare --> 1.1.1.1, 1.0.0.1) 
+be sure to add that to the config file, if you haven't changed it, or you have no idea what this means, just put 'auto' and you will 
+be fine.
 
 ### Pre requirements
 1. Wireguard, installed on server and basic wg0 is configured (https://www.wireguard.com/install/).
