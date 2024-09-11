@@ -19,8 +19,8 @@ And last but not least a directory called 'clients' containing:
 - wg0-template-prekey.conf - template to generate a peer's wg0.conf with a preshared key
 
 ### Pre requirements
-1. Wireguard, installed on server and basic wg0 is configured.
-2. qrencode, for more ease of use when generating and distributing client configurations.
+1. Wireguard, installed on server and basic wg0 is configured (https://www.wireguard.com/install/).
+2. qrencode, for more ease of use when generating and distributing client configurations. (`apt install qrencode`)
 
 ##### add-client
 ###### Description
